@@ -1,0 +1,23 @@
+.index-background {
+  position: relative;
+  height: calc(100vh - 58px - 16px - 24px);
+  width: 100%;
+  background: url(../images/hardik-pandya-HjzL2rJyGW4-unsplash.jpg) no-repeat
+    fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  background: #343a40;
+  opacity: 0.4;
+  height: 100%;
+  width: 100%;
+}
+.container-index {
+  position: relative;
+  padding-top: 10rem;
+  color: rgb(211, 214, 32);
+}
