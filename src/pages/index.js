@@ -7,12 +7,10 @@ import Layout from "../components/layout"
 
 const IndexPage = () => {
   return (
-    <Layout>
-      <div className="index-background">
-        <div className="overlay"></div>
-        <div className="container container-index">
-          <h1>Welcome</h1>
-        </div>
+    <Layout isHome={true}>
+      <div className="container my-container-index">
+        <h1>Welcome</h1>
+        <p>Find your dream home with me</p>
       </div>
     </Layout>
   )
@@ -36,4 +34,5 @@ export default IndexPage
         </Jumbotron>
       </Container>
 
+      
       */

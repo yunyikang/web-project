@@ -5,8 +5,10 @@ import { Container } from "react-bootstrap"
 
 const BuyerPage = () => (
   <Layout>
-    <h3 style={{ margin: "2rem 4rem" }}>Listing</h3>
-    <PropertyList />
+    <div className="container my-container">
+      <h3>Listing</h3>
+      <PropertyList />
+    </div>
   </Layout>
 )
 export default BuyerPage

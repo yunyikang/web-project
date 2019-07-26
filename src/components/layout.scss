@@ -1,23 +1,61 @@
-.index-background {
-  position: relative;
-  height: calc(100vh - 58px - 16px - 24px);
+main {
+  min-height: 80vh;
+}
+
+footer {
+  text-align: center;
+  background: #6c757d;
+  color: white;
+}
+
+.bg {
+  position: fixed;
+  height: 100vh;
   width: 100%;
-  background: url(../images/hardik-pandya-HjzL2rJyGW4-unsplash.jpg) no-repeat
-    fixed;
+  background: url(../images/bg.jpg) no-repeat fixed;
   background-position: center;
   background-size: cover;
+  z-index: -1;
 }
 
 .overlay {
   position: absolute;
   top: 0;
   background: #343a40;
-  opacity: 0.4;
+  opacity: 0.5;
   height: 100%;
   width: 100%;
 }
-.container-index {
+.my-container {
+  max-width: 75vw;
+  position: relative;
+  color: rgb(56, 56, 56);
+  padding-top: 2rem;
+}
+.my-container-index {
   position: relative;
   padding-top: 10rem;
-  color: rgb(211, 214, 32);
+  color: rgb(206, 206, 206);
+}
+.my-container-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.my-nav-brand {
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 576px) {
+  .my-container {
+    text-align: center;
+  }
+
+  .navbar-brand {
+    font-size: 1.45rem !important;
+  }
+  .nav-link {
+    font-size: 0.8rem !important;
+  }
 }

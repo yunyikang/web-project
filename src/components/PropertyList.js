@@ -9,14 +9,14 @@ const PropertyList = () => {
       allContentfulBook {
         edges {
           node {
+            bookImages {
+              fluid(maxHeight: 150) {
+                ...GatsbyContentfulFluid
+              }
+            }
             id
             bookTitle
             slug
-            bookImages {
-              fixed(height: 200, width: 270) {
-                ...GatsbyContentfulFixed
-              }
-            }
           }
         }
       }
@@ -24,26 +24,24 @@ const PropertyList = () => {
   `)
 
   return (
-    <Container
-      style={{
-        display: "flex",
-        justifyContent: "space-around",
-        flexWrap: "wrap",
-      }}
-    >
+    <div className="my-container-flex">
       {data.allContentfulBook.edges.map(edge => (
         <Card
           key={edge.node.id}
           bg="dark"
           text="white"
-          style={{ width: "17rem" }}
+          style={{ width: "15rem", margin: "1rem" }}
         >
-          <Img fixed={edge.node.bookImages[0].fixed} />
+          <Img fluid={edge.node.bookImages[0].fluid} />
           <Link to={`/property/${edge.node.slug}`}>{edge.node.bookTitle}</Link>
         </Card>
       ))}
-    </Container>
+    </div>
   )
 }
 
 export default PropertyList
+
+/*
+<Link to={`/property/${edge.node.slug}`}>{edge.node.bookTitle}</Link>
+*/

@@ -3,11 +3,16 @@ import React from "react"
 import { Link } from "gatsby"
 import { Navbar, Nav } from "react-bootstrap"
 
-const Header = () => {
+const Header = ({ isHome }) => {
   return (
     <header>
-      <Navbar collapseOnSelect expand="md" bg="secondary" variant="dark">
-        <Link className="navbar-brand" style={{ fontSize: "2rem" }} to="/">
+      <Navbar
+        collapseOnSelect
+        expand="md"
+        bg={isHome ? "" : "dark"}
+        variant="dark"
+      >
+        <Link className="navbar-brand my-nav-brand" to="/">
           Eugene Koh Property
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

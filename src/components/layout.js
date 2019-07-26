@@ -6,18 +6,23 @@ import Header from "./header"
 import "bootstrap/dist/css/bootstrap.css"
 import "./layout.scss"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, isHome }) => {
   return (
     <Fragment>
-      <Header />
+      {isHome && (
+        <div className="bg">
+          <div className="overlay"></div>
+        </div>
+      )}
+      <Header isHome={isHome} />
       <main>{children}</main>
-      <footer
-        style={{ textAlign: "center", background: "#6c757d", color: "white" }}
-      >
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
+      {!isHome && (
+        <footer>
+          © {new Date().getFullYear()}, Built with
+          {` `}
+          <a href="https://www.gatsbyjs.org">Gatsby</a>
+        </footer>
+      )}
     </Fragment>
   )
 }

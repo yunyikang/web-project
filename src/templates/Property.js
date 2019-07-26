@@ -20,18 +20,14 @@ export const query = graphql`
 const Property = ({ data, pageContext }) => {
   return (
     <Layout>
-      <h3 style={{ margin: "2rem 4rem" }}>{data.contentfulBook.bookTitle}</h3>
-      <Container
-        style={{
-          display: "flex",
-          justifyContent: "space-around",
-          flexWrap: "wrap",
-        }}
-      >
-        {data.contentfulBook.bookImages.map(image => (
-          <Img fixed={image.fixed} alt="img" />
-        ))}
-      </Container>
+      <div className="container my-container">
+        <h3>{data.contentfulBook.bookTitle}</h3>
+        <div className="my-container-flex">
+          {data.contentfulBook.bookImages.map(image => (
+            <Img fixed={image.fixed} alt="img" />
+          ))}
+        </div>
+      </div>
     </Layout>
   )
 }

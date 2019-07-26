@@ -6,7 +6,9 @@ import Layout from "../components/layout"
 
 const AboutPage = ({ data }) => (
   <Layout>
-    <h3 style={{ margin: "2rem 4rem" }}>About Me</h3>
+    <div className="container my-container">
+      <h3>About Me</h3>
+    </div>
   </Layout>
 )
 export const query = graphql`
